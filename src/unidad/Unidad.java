@@ -9,7 +9,7 @@ public abstract class Unidad {
 	protected int salud;
 	protected int ataque;
 	protected int defensa;
-	protected int energia;
+//	protected int energia;
 	protected double distanciaMinima;
 	protected double distanciaMaxima;
 	protected Punto posicion;
@@ -23,15 +23,15 @@ public abstract class Unidad {
 		this.posicion = Pos;
 	}
 	
-	public Unidad(int sa, int at, int de, int en, double mi, double ma, Punto posicion2) {
-		this.salud = sa;
-		this.ataque = at;
-		this.defensa = de;
-		this.energia = en;
-		this.distanciaMinima = mi;
-		this.distanciaMaxima = ma;
-		this.posicion = posicion2;
-	}
+//	public Unidad(int sa, int at, int de, int en, double mi, double ma, Punto posicion2) {
+//		this.salud = sa;
+//		this.ataque = at;
+//		this.defensa = de;
+//		this.energia = en;
+//		this.distanciaMinima = mi;
+//		this.distanciaMaxima = ma;
+//		this.posicion = posicion2;
+//	}
 
 	public boolean atacar(Unidad unidad) {
 		if(this.puedeAtacar(unidad)) {
@@ -58,10 +58,7 @@ public abstract class Unidad {
 	}
 
 
-	private boolean puedeRealizarAtaque() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	protected abstract boolean puedeRealizarAtaque();
 
 	public boolean estaMuerto() {
 		// TODO Auto-generated method stub

@@ -1,6 +1,5 @@
 package unidad;
 
-import unidad_2.Punto;
 
 public class Soldado extends Unidad{
 
@@ -15,6 +14,8 @@ public class Soldado extends Unidad{
 	private final static double DISTANCIA_MINIMA = 0.5;
 
 	private final static double DISTANCIA_MAXIMA = 1;
+	
+	private int energia;
 
 	public Soldado(Punto posicion) {
 			super(posicion);
@@ -48,6 +49,10 @@ public class Soldado extends Unidad{
 		// TODO Auto-generated method stub
 		this.energia -= 10;
 	}
-
 	
+	protected  boolean puedeRealizarAtaque() {
+		if(this.energia>= 10)
+			return true;
+		return false;
+	}
 }

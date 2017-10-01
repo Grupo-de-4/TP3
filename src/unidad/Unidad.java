@@ -1,7 +1,6 @@
 package unidad;
 import java.util.ArrayList;
 import item.*;
-import unidad_2.Punto;
 
 public abstract class Unidad {
 	

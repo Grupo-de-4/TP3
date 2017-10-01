@@ -11,7 +11,7 @@ public class Soldado extends Unidad{
 
 	private final static int DEFENSA = 3;
 
-	private final static double DISTANCIA_MINIMA = 0.5;
+	private final static double DISTANCIA_MINIMA = 0;
 
 	private final static double DISTANCIA_MAXIMA = 1;
 	

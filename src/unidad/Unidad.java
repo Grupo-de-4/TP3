@@ -1,6 +1,6 @@
 package unidad;
 import java.util.ArrayList;
-import item.*;
+
 
 public abstract class Unidad {
 	
@@ -13,12 +13,8 @@ public abstract class Unidad {
 	protected double distanciaMinima;
 	protected double distanciaMaxima;
 	protected Punto posicion;
-	protected ArrayList<Item> items;
+	protected ArrayList<String> items;
 	
-	/*public Unidad(){
-		this.posicion.x = 0;
-		
-	}*/
 	public Unidad(Punto Pos){
 		this.posicion = Pos;
 	}
@@ -32,6 +28,10 @@ public abstract class Unidad {
 //		this.distanciaMaxima = ma;
 //		this.posicion = posicion2;
 //	}
+
+	public Unidad() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public boolean atacar(Unidad unidad) {
 		if(this.puedeAtacar(unidad)) {

@@ -15,7 +15,7 @@ public class Soldado extends Unidad{
 
 	private final static double DISTANCIA_MAXIMA = 1;
 	
-	private int energia;
+	//private int energia;
 
 	public Soldado(Punto posicion) {
 			super(posicion);

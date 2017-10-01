@@ -1,5 +1,4 @@
 package unidad;
-import java.util.ArrayList;
 
 
 public abstract class Unidad {
@@ -9,13 +8,14 @@ public abstract class Unidad {
 	protected int salud;
 	protected int ataque;
 	protected int defensa;
-//	protected int energia;
+	protected int energia;
 	protected double distanciaMinima;
 	protected double distanciaMaxima;
 	protected Punto posicion;
-	protected ArrayList<String> items;
+	protected String[] items;
 	
 	public Unidad(Punto Pos){
+		items = new String[3];
 		this.posicion = Pos;
 	}
 	

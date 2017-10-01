@@ -10,7 +10,7 @@ public abstract class ItemDecorator extends Unidad{
 	}
 	protected boolean puedeEquipar() {
 		//array list tiene menos de 3 elementos
-		if(this.items)
+		if(this.items[0] == null)
 			return true;
 		return false;
 	}

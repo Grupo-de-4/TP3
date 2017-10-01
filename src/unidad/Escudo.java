@@ -10,7 +10,7 @@ public class Escudo extends ItemDecorator{
 	public void darBonus() {
 		if(this.puedeEquipar())
 			{this.defensa += (this.defensa*40)/100;
-			this.items = "Escudo";}
+			this.items[0] = "Escudo";}
 	}
 
 	@Override
@@ -24,5 +24,12 @@ public class Escudo extends ItemDecorator{
 
 	@Override
 	protected boolean puedeRealizarAtaque() {return false;}
+
+	@Override
+	protected boolean puedeEquipar() {
+		if(this.items[0] == null)
+			return true;
+		return false;
+	}
 	
 }

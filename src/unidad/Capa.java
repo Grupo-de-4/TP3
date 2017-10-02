@@ -20,9 +20,8 @@ public class Capa extends ItemDecorator{
 	@Override
 	public void darBonus() {
 				this.energiaBonus = this.getUnidad().energia *= 2;
-				this.energiaBonus = this.getUnidad().ataque -= (this.getUnidad().ataque*10)/100;
+				this.ataqueBonus = this.getUnidad().ataque -= (this.getUnidad().ataque*10)/100;
 				this.getUnidad().items[1] = "Capa";
-		
 	}
 
 	@Override

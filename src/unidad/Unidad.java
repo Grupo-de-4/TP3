@@ -4,9 +4,13 @@ package unidad;
 public abstract class Unidad {
 	
 	protected final static int CANT_MAX_ITEMS = 3;
-	
 	protected int salud;
 	protected int ataque;
+	public int getSalud() {
+		return salud;
+	}
+
+
 	protected int defensa;
 	protected int energia;
 	protected double distanciaMinima;
@@ -72,24 +76,62 @@ public abstract class Unidad {
 		this.posicion = posicion;
 	}
 	
-	public void equiparEscudo() {
-		Escudo escudo = new Escudo(this);
-		
-		escudo.equipar();
+
+	public void setSalud(int salud) {
+		this.salud = salud;
 	}
-	
-	public void equiparPuñal() {
-		Puñal puñal = new Puñal(this);
-		
-		puñal.equipar();
+
+	public int getAtaque() {
+		return ataque;
 	}
-	
-	public void equiparCapa() {
-		Capa capa = new Capa(this);
-		
-		capa.equipar();
+
+	public void setAtaque(int ataque) {
+		this.ataque = ataque;
 	}
-	
+
+	public int getDefensa() {
+		return defensa;
+	}
+
+	public void setDefensa(int defensa) {
+		this.defensa = defensa;
+	}
+
+	public int getEnergia() {
+		return energia;
+	}
+
+	public void setEnergia(int energia) {
+		this.energia = energia;
+	}
+
+	public double getDistanciaMinima() {
+		return distanciaMinima;
+	}
+
+	public void setDistanciaMinima(double distanciaMinima) {
+		this.distanciaMinima = distanciaMinima;
+	}
+
+	public double getDistanciaMaxima() {
+		return distanciaMaxima;
+	}
+
+	public void setDistanciaMaxima(double distanciaMaxima) {
+		this.distanciaMaxima = distanciaMaxima;
+	}
+
+	public String[] getItems() {
+		return items;
+	}
+
+	public void setItems(String[] items) {
+		this.items = items;
+	}
+
+	public static int getCantMaxItems() {
+		return CANT_MAX_ITEMS;
+	}
 }
 
 

@@ -8,12 +8,7 @@ public abstract class ItemDecorator extends Unidad{
 		super();
 		this.unidad = unidad;
 	}
-	protected boolean puedeEquipar() {
-		//array list tiene menos de 3 elementos
-		if(this.items[0] == null)
-			return true;
-		return false;
-	}
+	protected abstract boolean puedeEquipar();
 
 	protected Unidad getUnidad(){
 		return this.unidad;

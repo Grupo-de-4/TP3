@@ -13,6 +13,9 @@ public abstract class ItemDecorator extends Unidad{
 	protected Unidad getUnidad(){
 		return this.unidad;
 	}
-	public abstract void darBonus();
 	
+	public abstract void equipar();
+	public abstract void desEquipar();
+	public abstract void darBonus();
+	public abstract void sacarBonus();
 }

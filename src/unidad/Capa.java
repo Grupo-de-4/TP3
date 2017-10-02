@@ -2,6 +2,8 @@ package unidad;
 
 public class Capa extends ItemDecorator{
 
+	private int energiaBonus;
+	private int ataqueBonus;
 	public Capa(Unidad unidad) {
 		super(unidad);
 		// TODO Auto-generated constructor stub
@@ -16,37 +18,48 @@ public class Capa extends ItemDecorator{
 
 	@Override
 	public void darBonus() {
-		if(this.puedeEquipar())
-			{
-				this.energia *= 2;
-				this.ataque -= (this.ataque*10)/100;
+				this.energiaBonus = this.energia *= 2;
+				this.energiaBonus = this.ataque -= (this.ataque*10)/100;
 				this.items[1] = "Capa";
-			}
 		
 	}
 
 	@Override
-	public void consumirAgua() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void consumirAgua() {}
 
 	@Override
-	public void serAtacado(int daño) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void serAtacado(int daño) {}
 
 	@Override
-	public void realizarAtaque() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void realizarAtaque() {}
 
 	@Override
 	protected boolean puedeRealizarAtaque() {
-		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public void equipar() {
+		if(this.puedeEquipar()){
+			this.darBonus();
+		}
+			
+		
+	}
+
+	@Override
+	public void desEquipar() {
+		if(this.puedeEquipar()== false)
+			this.sacarBonus();
+		
+	}
+
+	@Override
+	public void sacarBonus() {
+		this.energia -= this.energiaBonus;
+		this.ataque += this.ataqueBonus;
+		this.items[1] = null;
+		
 	}
 	
 	

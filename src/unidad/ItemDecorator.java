@@ -4,15 +4,14 @@ public abstract class ItemDecorator extends Unidad{
 	
 	private Unidad unidad;
 	
+
 	public ItemDecorator(Unidad unidad) {
 		super();
 		this.unidad = unidad;
 	}
 	protected abstract boolean puedeEquipar();
 
-	protected Unidad getUnidad(){
-		return this.unidad;
-	}
+
 	
 	public  void equipar(){
 		if(this.puedeEquipar()){
@@ -23,9 +22,17 @@ public abstract class ItemDecorator extends Unidad{
 	public void desEquipar() {
 		if(this.puedeEquipar()== false)
 			this.sacarBonus();
-		
 	}
 	
 	public abstract void darBonus();
 	public abstract void sacarBonus();
+	
+	public void setUnidad(Unidad unidad) {
+		this.unidad = unidad;
+	}
+	
+	protected Unidad getUnidad(){
+		return this.unidad;
+	}
+	
 }

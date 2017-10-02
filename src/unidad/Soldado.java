@@ -13,7 +13,7 @@ public class Soldado extends Unidad{
 
 	private final static double DISTANCIA_MINIMA = 0;
 
-	private final static double DISTANCIA_MAXIMA = 1;
+	private final static double DISTANCIA_MAXIMA = 0;
 	
 	//private int energia;
 
@@ -36,9 +36,7 @@ public class Soldado extends Unidad{
 
 	@Override
 	public void serAtacado(int daño) {
-		// TODO Auto-generated method stub
-		if(daño > this.defensa)
-			if (this.salud < daño)
+			if (this.salud < daño - this.salud)
 				this.salud = 0;
 			else
 				this.salud -= daño - this.defensa;

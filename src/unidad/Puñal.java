@@ -11,16 +11,16 @@ public class Puñal extends ItemDecorator{
 
 	@Override
 	protected boolean puedeEquipar() {
-		if(this.items[2] == null)
+		if(this.getUnidad().items[2] == null)
 			return true;
 		return false;
 	}
 
 	@Override
 	public void darBonus() {
-			this.ataque += 3;
-			this.defensa -= 3;
-			this.items[2] = "Puñal";
+			this.getUnidad().ataque += 3;
+			this.getUnidad().defensa -= 3;
+			this.getUnidad().items[2] = "Puñal";
 	}
 
 	@Override
@@ -37,9 +37,9 @@ public class Puñal extends ItemDecorator{
 
 	@Override
 	public void sacarBonus() {
-		this.ataque -= this.ataqueBonus;
-		this.defensa += this.defensaBonus;
-		this.items[2] = null;
+		this.getUnidad().ataque -= this.ataqueBonus;
+		this.getUnidad().defensa += this.defensaBonus;
+		this.getUnidad().items[2] = null;
 		
 	}
 

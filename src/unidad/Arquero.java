@@ -32,8 +32,7 @@ public class Arquero extends Unidad{
 
 	@Override
 	public void serAtacado(int daño) {
-		if(daño > this.defensa)
-			if (this.salud < daño)
+			if (this.salud < daño - this.salud)
 				this.salud = 0;
 			else
 				this.salud -= daño - this.defensa;

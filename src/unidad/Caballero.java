@@ -34,8 +34,7 @@ public class Caballero extends Unidad{
 
 	@Override
 	public void serAtacado(int daño) {
-		if(daño > this.defensa)
-			if (this.salud < daño)
+			if (this.salud < daño - this.defensa)
 				this.salud = 0;
 			else
 				this.salud -= daño - this.defensa;
@@ -50,7 +49,7 @@ public class Caballero extends Unidad{
 
 	@Override
 	protected boolean puedeRealizarAtaque() {
-		if(this.cant_ataques < 3)
+		if(this.cant_ataques < ATAQUES_LIMITE)
 			return true;
 		return false;
 	}

@@ -30,7 +30,7 @@ public abstract class Unidad {
 //	}
 
 	public Unidad() {
-		// TODO Auto-generated constructor stub
+		items = new String[3];
 	}
 
 	public boolean atacar(Unidad unidad) {
@@ -52,7 +52,7 @@ public abstract class Unidad {
 		if(this.estaMuerto() || unidad.estaMuerto())
 			return false;
 		double distancia = this.posicion.distanciaCon(unidad.getPosicion());
-		if(distancia >= this.distanciaMinima && distancia <= this.distanciaMaxima && this.puedeRealizarAtaque())
+		if(distancia >= this.distanciaMinima && (this.distanciaMaxima > 0 ? distancia <= this.distanciaMaxima : true) && this.puedeRealizarAtaque())
 			return true;
 		return false;
 	}
@@ -61,7 +61,6 @@ public abstract class Unidad {
 	protected abstract boolean puedeRealizarAtaque();
 
 	public boolean estaMuerto() {
-		// TODO Auto-generated method stub
 		return this.salud == 0;
 	}
 	
@@ -71,6 +70,24 @@ public abstract class Unidad {
 
 	public void setPosicion(Punto posicion) {
 		this.posicion = posicion;
+	}
+	
+	public void equiparEscudo() {
+		Escudo escudo = new Escudo(this);
+		
+		escudo.equipar();
+	}
+	
+	public void equiparPuñal() {
+		Puñal puñal = new Puñal(this);
+		
+		puñal.equipar();
+	}
+	
+	public void equiparCapa() {
+		Capa capa = new Capa(this);
+		
+		capa.equipar();
 	}
 	
 }

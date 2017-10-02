@@ -14,8 +14,18 @@ public abstract class ItemDecorator extends Unidad{
 		return this.unidad;
 	}
 	
-	public abstract void equipar();
-	public abstract void desEquipar();
+	public  void equipar(){
+		if(this.puedeEquipar()){
+			this.darBonus();
+		}
+	}
+	
+	public void desEquipar() {
+		if(this.puedeEquipar()== false)
+			this.sacarBonus();
+		
+	}
+	
 	public abstract void darBonus();
 	public abstract void sacarBonus();
 }

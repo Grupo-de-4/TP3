@@ -4,6 +4,7 @@ public class Capa extends ItemDecorator{
 
 	private int energiaBonus;
 	private int ataqueBonus;
+	
 	public Capa(Unidad unidad) {
 		super(unidad);
 		// TODO Auto-generated constructor stub
@@ -36,22 +37,6 @@ public class Capa extends ItemDecorator{
 	@Override
 	protected boolean puedeRealizarAtaque() {
 		return false;
-	}
-
-	@Override
-	public void equipar() {
-		if(this.puedeEquipar()){
-			this.darBonus();
-		}
-			
-		
-	}
-
-	@Override
-	public void desEquipar() {
-		if(this.puedeEquipar()== false)
-			this.sacarBonus();
-		
 	}
 
 	@Override

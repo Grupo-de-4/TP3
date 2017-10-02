@@ -2,15 +2,16 @@ package unidad;
 
 public class Escudo extends ItemDecorator{
 
+	private int defensaBonus;
+	
 	public Escudo(Unidad unidad) {
 		super(unidad);
 	}
 
 	@Override
 	public void darBonus() {
-		if(this.puedeEquipar())
-			{this.defensa += (this.defensa*40)/100;
-			this.items[0] = "Escudo";}
+			this.defensa += (this.defensa*40)/100;
+			this.items[0] = "Escudo";
 	}
 
 	@Override
@@ -30,6 +31,12 @@ public class Escudo extends ItemDecorator{
 		if(this.items[0] == null)
 			return true;
 		return false;
+	}
+	@Override
+	public void sacarBonus() {
+		this.defensa -= this.defensaBonus;
+		this.items[0] = null;
+		
 	}
 	
 }

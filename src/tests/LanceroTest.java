@@ -1,8 +1,11 @@
-package unidad;
+package tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import unidad.Lancero;
+import unidad.Punto;
 
 public class LanceroTest {
 
@@ -16,7 +19,7 @@ public class LanceroTest {
 		
 		l1.atacar(l2);
 		
-		assertEquals( 128, l2.salud, 0);	
+		assertEquals( 128, l2.getSalud(), 0);	
 	}
 
 	
@@ -30,7 +33,7 @@ public class LanceroTest {
 		
 		l1.atacar(l2);
 		
-		assertEquals( 150, l2.salud, 0);	
+		assertEquals( 150, l2.getSalud(), 0);	
 	}
 	
 	@Test
@@ -43,7 +46,7 @@ public class LanceroTest {
 		
 		l1.atacar(l2);
 		
-		assertEquals( 150, l2.salud, 0);	
+		assertEquals( 150, l2.getSalud(), 0);	
 	}
 
 }

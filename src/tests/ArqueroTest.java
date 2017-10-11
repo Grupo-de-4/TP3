@@ -1,8 +1,11 @@
-package unidad;
+package tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import unidad.Arquero;
+import unidad.Punto;
 
 public class ArqueroTest {
 
@@ -16,7 +19,7 @@ public class ArqueroTest {
 		
 		a1.atacar(a2);
 		
-		assertEquals( 48, a2.salud, 0);	
+		assertEquals( 48, a2.getSalud(), 0);	
 	}
 
 	@Test
@@ -29,7 +32,7 @@ public class ArqueroTest {
 		
 		a1.atacar(a2);
 		
-		assertEquals( 50, a2.salud, 0);	
+		assertEquals( 50, a2.getSalud(), 0);	
 	}
 	
 	@Test
@@ -42,7 +45,7 @@ public class ArqueroTest {
 		
 		a1.atacar(a2);
 		
-		assertEquals( 50, a2.salud, 0);	
+		assertEquals( 50, a2.getSalud(), 0);	
 	}
 	
 	@Test

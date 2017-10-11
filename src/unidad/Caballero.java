@@ -48,7 +48,7 @@ public class Caballero extends Unidad{
 	}
 
 	@Override
-	protected boolean puedeRealizarAtaque() {
+	public boolean puedeRealizarAtaque() {
 		if(this.cant_ataques < ATAQUES_LIMITE)
 			return true;
 		return false;

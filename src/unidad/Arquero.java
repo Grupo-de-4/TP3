@@ -44,7 +44,7 @@ public class Arquero extends Unidad{
 		
 	}
 
-	protected boolean puedeRealizarAtaque() {
+	public boolean puedeRealizarAtaque() {
 		if(this.flechas > 0)
 			return true;
 		return false;

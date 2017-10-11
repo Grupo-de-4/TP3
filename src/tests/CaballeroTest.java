@@ -1,8 +1,11 @@
-package unidad;
+package tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import unidad.Caballero;
+import unidad.Punto;
 
 public class CaballeroTest {
 
@@ -18,7 +21,7 @@ public class CaballeroTest {
 		
 		c1.atacar(c2);
 		
-		assertEquals( 153, c2.salud, 0);	
+		assertEquals( 153, c2.getSalud(), 0);	
 	}
 
 	public void testCaballoSePoneRevelde() {

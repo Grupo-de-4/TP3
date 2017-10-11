@@ -6,9 +6,6 @@ public abstract class Unidad {
 	protected final static int CANT_MAX_ITEMS = 3;
 	protected int salud;
 	protected int ataque;
-	public int getSalud() {
-		return salud;
-	}
 
 
 	protected int defensa;
@@ -79,6 +76,10 @@ public abstract class Unidad {
 
 	public void setSalud(int salud) {
 		this.salud = salud;
+	}
+
+	public int getSalud() {
+		return salud;
 	}
 
 	public int getAtaque() {

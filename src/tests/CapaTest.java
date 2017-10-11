@@ -1,8 +1,13 @@
-package unidad;
+package tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import unidad.Capa;
+import unidad.Punto;
+import unidad.Soldado;
+import unidad.Unidad;
 
 public class CapaTest {
 

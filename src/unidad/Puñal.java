@@ -24,13 +24,25 @@ public class Puñal extends ItemDecorator{
 	}
 
 	@Override
-	public void consumirAgua() {}
+	public boolean atacar(Unidad unidad) {
+		return this.getUnidad().atacar(unidad);
+	}
+
+	
+	@Override
+	public void consumirAgua() {
+		this.getUnidad().consumirAgua();
+	}
 
 	@Override
-	public void serAtacado(int daño) {}
+	public void serAtacado(int daño) {
+		this.getUnidad().serAtacado(daño);
+	}
 
 	@Override
-	public void realizarAtaque() {}
+	public void realizarAtaque() {
+		this.getUnidad().realizarAtaque();
+	}
 
 	@Override
 	protected boolean puedeRealizarAtaque() {return false;}

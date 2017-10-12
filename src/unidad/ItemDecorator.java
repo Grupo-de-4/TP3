@@ -34,6 +34,11 @@ public abstract class ItemDecorator extends Unidad{
 	}
 
 	@Override
+	public int getSalud() {
+		return this.unidad.salud;
+	}
+	
+	@Override
 	public int getAtaque() {
 		return this.unidad.ataque;
 	}

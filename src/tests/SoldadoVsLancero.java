@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import sun.security.x509.PolicyInformation;
 import unidad.Capa;
 import unidad.Escudo;
 import unidad.Lancero;
@@ -43,14 +42,6 @@ public class SoldadoVsLancero {
 
 		assertEquals( 140, lancero.getSalud(), 0);	
 	}
-	
-	/*
-	 * 13.Soldado con puñal y capa vs Lancero
-14.Soldado con puñal, capa vs Lancero con escudo
-20. Soldado vs Lancero con escudo
-20.2 Soldado vs Lancero con escudo, lancero toma pocion
-20.3 Soldado vs lancero, ataca hasta la muerte del lancero. La familia del lancero llora.
-	*/
 	
 	@Test
 	public void testSoldadoPuñalCapaVsLancero()

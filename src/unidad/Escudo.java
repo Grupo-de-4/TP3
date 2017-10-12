@@ -10,18 +10,30 @@ public class Escudo extends ItemDecorator{
 
 	@Override
 	public void darBonus() {
-			this.getUnidad().defensa += (this.getUnidad().defensa*40)/100;
+			this.getUnidad().defensa += this.getUnidad().defensa * 0.4;
 			this.getUnidad().items[0] = "Escudo";
+	}
+/*
+	@Override
+	public void consumirAgua() {
+		this.getUnidad().consumirAgua();
+	}
+*/
+	/*
+	@Override
+	public boolean atacar(Unidad unidad) {
+		return this.getUnidad().atacar(unidad);
+	}*/
+
+	@Override
+	public void serAtacado(int daño) {
+		this.getUnidad().serAtacado(daño);
 	}
 
 	@Override
-	public void consumirAgua() {}
-
-	@Override
-	public void serAtacado(int daño) {}
-
-	@Override
-	public void realizarAtaque() {}
+	public void realizarAtaque() {
+		this.getUnidad().realizarAtaque();
+	}
 
 	@Override
 	protected boolean puedeRealizarAtaque() {return false;}

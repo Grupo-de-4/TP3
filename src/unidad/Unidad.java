@@ -132,4 +132,12 @@ public abstract class Unidad {
 	public static int getCantMaxItems() {
 		return CANT_MAX_ITEMS;
 	}
+
+	public Unidad getUnidad() {
+		return this;
+	}
+	/*
+	 * public void darBonus() { }
+	 */
+
 }

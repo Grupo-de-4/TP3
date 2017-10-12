@@ -23,11 +23,39 @@ public abstract class ItemDecorator extends Unidad{
 		this.unidad = unidad;
 	}
 	
-	protected Unidad getUnidad(){
-		return this.unidad;
+	public Unidad getUnidad(){
+		return this.unidad.getUnidad();
+	}
+
+	@Override
+	public boolean atacar(Unidad unidad) {
+		return this.getUnidad().atacar(unidad);
 	}
 	
-
+	@Override
+	public Punto getPosicion() {
+		return this.getUnidad().getPosicion();
+	}
+	
+	@Override
+	public void consumirAgua() {
+		this.getUnidad().consumirAgua();
+	}
+	@Override
+	public void serAtacado(int daño) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void realizarAtaque() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	protected boolean puedeRealizarAtaque() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	@Override
 	public void setSalud(int salud) {
 		this.unidad.salud = salud;
